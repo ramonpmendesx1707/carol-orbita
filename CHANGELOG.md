@@ -1,3 +1,7 @@
+# 1.2.0
+- Mapa com nomes completos dos estados e Distrito Federal.
+- Contraste da faixa de contato e texto de atendimento revisados.
+
 # Histórico
 
 ## 1.1.0 — 2026-10-07

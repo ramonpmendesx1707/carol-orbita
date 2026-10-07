@@ -4,7 +4,7 @@ export async function apiFetch(path:string,init:RequestInit={}){
  const r=await fetch(new URL(path,API_ORIGIN),{...init,credentials:'omit'});
  if(r.ok&&(path==='/api/catalog'||path==='/api/manage/catalog')){
   const data=await r.json() as {products:Record<string,unknown>[]};
-  const base=location.pathname.startsWith('/carol-componentes/')?'/carol-componentes/':'/';
+  const base=location.pathname.match(/^\/(?:carol-componentes|carol-orbita)\//)?.[0]||'/';
   // Build the canonical prefix without an asset literal: the Pages transform
   // must never rewrite the prefix used to recognize API payloads.
   const prefix=['','images',''].join('/');

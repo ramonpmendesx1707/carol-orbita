@@ -1,29 +1,218 @@
 [
- {"name":"Boa Vista","uf":"RR","lon":-60.67,"lat":2.82,"region":"Norte"},
- {"name":"Macapá","uf":"AP","lon":-51.07,"lat":0.03,"region":"Norte"},
- {"name":"Belém","uf":"PA","lon":-48.49,"lat":-1.46,"region":"Norte"},
- {"name":"Manaus","uf":"AM","lon":-60.02,"lat":-3.12,"region":"Norte"},
- {"name":"Porto Velho","uf":"RO","lon":-63.90,"lat":-8.76,"region":"Norte"},
- {"name":"Rio Branco","uf":"AC","lon":-67.81,"lat":-9.98,"region":"Norte"},
- {"name":"Palmas","uf":"TO","lon":-48.33,"lat":-10.18,"region":"Norte"},
- {"name":"São Luís","uf":"MA","lon":-44.30,"lat":-2.53,"region":"Nordeste"},
- {"name":"Fortaleza","uf":"CE","lon":-38.52,"lat":-3.73,"region":"Nordeste"},
- {"name":"Teresina","uf":"PI","lon":-42.80,"lat":-5.09,"region":"Nordeste"},
- {"name":"Natal","uf":"RN","lon":-35.21,"lat":-5.79,"region":"Nordeste"},
- {"name":"João Pessoa","uf":"PB","lon":-34.86,"lat":-7.12,"region":"Nordeste"},
- {"name":"Recife","uf":"PE","lon":-34.88,"lat":-8.05,"region":"Nordeste"},
- {"name":"Maceió","uf":"AL","lon":-35.74,"lat":-9.65,"region":"Nordeste"},
- {"name":"Aracaju","uf":"SE","lon":-37.07,"lat":-10.91,"region":"Nordeste"},
- {"name":"Salvador","uf":"BA","lon":-38.50,"lat":-12.98,"region":"Nordeste"},
- {"name":"Cuiabá","uf":"MT","lon":-56.10,"lat":-15.60,"region":"Centro-Oeste"},
- {"name":"Brasília","uf":"DF","lon":-47.88,"lat":-15.79,"region":"Centro-Oeste"},
- {"name":"Goiânia","uf":"GO","lon":-49.25,"lat":-16.68,"region":"Centro-Oeste"},
- {"name":"Campo Grande","uf":"MS","lon":-54.65,"lat":-20.47,"region":"Centro-Oeste"},
- {"name":"Belo Horizonte","uf":"MG","lon":-43.94,"lat":-19.92,"region":"Sudeste"},
- {"name":"Vitória","uf":"ES","lon":-40.34,"lat":-20.32,"region":"Sudeste"},
- {"name":"Rio de Janeiro","uf":"RJ","lon":-43.17,"lat":-22.91,"region":"Sudeste"},
- {"name":"São Paulo","uf":"SP","lon":-46.63,"lat":-23.55,"region":"Sudeste"},
- {"name":"Curitiba","uf":"PR","lon":-49.27,"lat":-25.43,"region":"Sul"},
- {"name":"Florianópolis","uf":"SC","lon":-48.55,"lat":-27.59,"region":"Sul"},
- {"name":"Porto Alegre","uf":"RS","lon":-51.23,"lat":-30.03,"region":"Sul"}
+  {
+    "name": "Boa Vista",
+    "uf": "RR",
+    "lon": -60.67,
+    "lat": 2.82,
+    "region": "Norte",
+    "state": "Roraima"
+  },
+  {
+    "name": "Macapá",
+    "uf": "AP",
+    "lon": -51.07,
+    "lat": 0.03,
+    "region": "Norte",
+    "state": "Amapá"
+  },
+  {
+    "name": "Belém",
+    "uf": "PA",
+    "lon": -48.49,
+    "lat": -1.46,
+    "region": "Norte",
+    "state": "Pará"
+  },
+  {
+    "name": "Manaus",
+    "uf": "AM",
+    "lon": -60.02,
+    "lat": -3.12,
+    "region": "Norte",
+    "state": "Amazonas"
+  },
+  {
+    "name": "Porto Velho",
+    "uf": "RO",
+    "lon": -63.9,
+    "lat": -8.76,
+    "region": "Norte",
+    "state": "Rondônia"
+  },
+  {
+    "name": "Rio Branco",
+    "uf": "AC",
+    "lon": -67.81,
+    "lat": -9.98,
+    "region": "Norte",
+    "state": "Acre"
+  },
+  {
+    "name": "Palmas",
+    "uf": "TO",
+    "lon": -48.33,
+    "lat": -10.18,
+    "region": "Norte",
+    "state": "Tocantins"
+  },
+  {
+    "name": "São Luís",
+    "uf": "MA",
+    "lon": -44.3,
+    "lat": -2.53,
+    "region": "Nordeste",
+    "state": "Maranhão"
+  },
+  {
+    "name": "Fortaleza",
+    "uf": "CE",
+    "lon": -38.52,
+    "lat": -3.73,
+    "region": "Nordeste",
+    "state": "Ceará"
+  },
+  {
+    "name": "Teresina",
+    "uf": "PI",
+    "lon": -42.8,
+    "lat": -5.09,
+    "region": "Nordeste",
+    "state": "Piauí"
+  },
+  {
+    "name": "Natal",
+    "uf": "RN",
+    "lon": -35.21,
+    "lat": -5.79,
+    "region": "Nordeste",
+    "state": "Rio Grande do Norte"
+  },
+  {
+    "name": "João Pessoa",
+    "uf": "PB",
+    "lon": -34.86,
+    "lat": -7.12,
+    "region": "Nordeste",
+    "state": "Paraíba"
+  },
+  {
+    "name": "Recife",
+    "uf": "PE",
+    "lon": -34.88,
+    "lat": -8.05,
+    "region": "Nordeste",
+    "state": "Pernambuco"
+  },
+  {
+    "name": "Maceió",
+    "uf": "AL",
+    "lon": -35.74,
+    "lat": -9.65,
+    "region": "Nordeste",
+    "state": "Alagoas"
+  },
+  {
+    "name": "Aracaju",
+    "uf": "SE",
+    "lon": -37.07,
+    "lat": -10.91,
+    "region": "Nordeste",
+    "state": "Sergipe"
+  },
+  {
+    "name": "Salvador",
+    "uf": "BA",
+    "lon": -38.5,
+    "lat": -12.98,
+    "region": "Nordeste",
+    "state": "Bahia"
+  },
+  {
+    "name": "Cuiabá",
+    "uf": "MT",
+    "lon": -56.1,
+    "lat": -15.6,
+    "region": "Centro-Oeste",
+    "state": "Mato Grosso"
+  },
+  {
+    "name": "Brasília",
+    "uf": "DF",
+    "lon": -47.88,
+    "lat": -15.79,
+    "region": "Centro-Oeste",
+    "state": "Distrito Federal"
+  },
+  {
+    "name": "Goiânia",
+    "uf": "GO",
+    "lon": -49.25,
+    "lat": -16.68,
+    "region": "Centro-Oeste",
+    "state": "Goiás"
+  },
+  {
+    "name": "Campo Grande",
+    "uf": "MS",
+    "lon": -54.65,
+    "lat": -20.47,
+    "region": "Centro-Oeste",
+    "state": "Mato Grosso do Sul"
+  },
+  {
+    "name": "Belo Horizonte",
+    "uf": "MG",
+    "lon": -43.94,
+    "lat": -19.92,
+    "region": "Sudeste",
+    "state": "Minas Gerais"
+  },
+  {
+    "name": "Vitória",
+    "uf": "ES",
+    "lon": -40.34,
+    "lat": -20.32,
+    "region": "Sudeste",
+    "state": "Espírito Santo"
+  },
+  {
+    "name": "Rio de Janeiro",
+    "uf": "RJ",
+    "lon": -43.17,
+    "lat": -22.91,
+    "region": "Sudeste",
+    "state": "Rio de Janeiro"
+  },
+  {
+    "name": "São Paulo",
+    "uf": "SP",
+    "lon": -46.63,
+    "lat": -23.55,
+    "region": "Sudeste",
+    "state": "São Paulo"
+  },
+  {
+    "name": "Curitiba",
+    "uf": "PR",
+    "lon": -49.27,
+    "lat": -25.43,
+    "region": "Sul",
+    "state": "Paraná"
+  },
+  {
+    "name": "Florianópolis",
+    "uf": "SC",
+    "lon": -48.55,
+    "lat": -27.59,
+    "region": "Sul",
+    "state": "Santa Catarina"
+  },
+  {
+    "name": "Porto Alegre",
+    "uf": "RS",
+    "lon": -51.23,
+    "lat": -30.03,
+    "region": "Sul",
+    "state": "Rio Grande do Sul"
+  }
 ]
