@@ -22,3 +22,8 @@ Contorno do Brasil: Natural Earth 1:110m Admin 0 Countries, domínio público. h
 
 ## Validação e continuidade
 Verificar TypeScript e build Worker. Revisar larguras 320, 390, 768 e 1440; busca, detalhe, comparação vertical, regiões do mapa, pausa, redução de movimento, 4 capítulos em subida/descida, arquivos locais e contatos. Documentos em docs/ herdados são referência histórica do projeto base; este README e AGENTS.md prevalecem para identidade, nova URL e separação dos projetos. Não publicar .env, .dev.vars, node_modules, work, .wrangler, conversas ou dados de clientes.
+
+## Seleção integrada de produtos
+Salvos e linhas de cotação são combinados por lib/selection.ts. O contador superior abre a seleção completa; todos os botões de contato incluem essa seleção na mensagem. Favorito sem medida é enviado como “Medida a definir”. Linhas com medida têm prioridade sobre o favorito do mesmo produto. A persistência continua local, separada em cada site. Mensagens não são enviadas automaticamente pelo WhatsApp.
+
+O mapa inclui as 26 capitais estaduais e Brasília, agrupadas em Norte (7), Nordeste (9), Centro-Oeste (4), Sudeste (4) e Sul (3). data/brazil-capitals.json mantém coordenadas aproximadas para visualização; Joinville é a origem, não uma capital. Cada trajeto tem seta persistente, fluxo animado, rótulos regionais e lista legível no celular. Não representa roteiro logístico real.

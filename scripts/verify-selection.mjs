@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {buildSelection} from '../lib/selection.ts';
+const products=[{id:1},{id:2},{id:3}];
+const line=(id,variant='',qty=1)=>({id,key:`${id}:${variant}`,variant,qty});
+assert.deepEqual(buildSelection(products,[],[1,2]),[line(1),line(2)]);
+assert.deepEqual(buildSelection(products,[line(1,'M8',4)],[1,2]),[line(1,'M8',4),line(2)]);
+assert.deepEqual(buildSelection(products,[line(1),line(1,'M8',4),line(1,'M10',2)],[1]),[line(1,'M8',4),line(1,'M10',2)]);
+assert.deepEqual(buildSelection(products,[],[1,1,99]),[line(1)]);
+assert.deepEqual(buildSelection(products,[line(99),line(2),line(2)],[]),[line(2)]);
+const quotes=[line(1,'M8')];buildSelection(products,quotes,[2]);assert.equal(quotes.length,1);
+console.log('Selection: saved items, quote precedence, measures, deduplication, deleted products and immutability passed.');

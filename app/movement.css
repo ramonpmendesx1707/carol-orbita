@@ -50,3 +50,12 @@ html{scrollbar-gutter:stable;scroll-padding-top:105px}body{background:#f9f8fc}.t
 @media(max-width:1100px){.header-inner{gap:16px}.site-header nav{gap:18px}.header-actions .quote-toggle>span{display:none}.brand strong>span{font-size:15px}}
 @media(max-width:560px){.site-header .brand{gap:9px}.site-header .brand strong{font-size:24px}.site-header .brand strong>span{font-size:12px}.creator-credit{justify-content:flex-start;gap:8px 12px}.footer-bottom{align-items:flex-start;gap:14px}.creator-credit>a.creator-email{flex-basis:100%}.product-thumbnails button{flex-basis:62px;height:62px}}
 @media(max-width:560px){.footer-grid>div:first-child{grid-column:1/-1}.footer-grid .brand strong>span{font-size:15px}.footer-grid>div:nth-child(3)>a{font-size:12px}}
+
+/* Saved products and explicit quote items share one visible selection. */
+.product-image .favorite{width:36px;height:36px;display:grid;place-items:center;background:#fff;color:var(--navy);border:1px solid var(--line);z-index:2}
+.product-image .favorite svg{display:block;width:18px;height:18px;stroke:currentColor;fill:none}
+.product-image .favorite.active,.product-image .favorite[aria-pressed=true]{background:var(--navy);border-color:var(--navy);color:#fff}
+.product-image .favorite.active svg{fill:currentColor;stroke:currentColor}
+.quote-toggle b{min-width:25px;min-height:25px;background:var(--navy);color:white;transition:background .2s}
+.contact-selection{padding:17px 19px;border:1px solid var(--line);border-radius:12px;background:var(--paper);margin-bottom:23px;font-size:14px}
+.contact-selection>strong{display:block;color:var(--navy);margin-bottom:10px}.contact-selection ul{padding:0;margin:0;list-style:none;max-height:180px;overflow:auto;display:grid;gap:10px}.contact-selection li{display:flex;gap:12px;align-items:start}.contact-selection li>span{flex-shrink:0;font-weight:600;min-width:30px}.contact-selection li strong{font-weight:500}.contact-selection li small{display:block;color:var(--muted);font-size:12px}.contact-selection>p{font-size:12px;line-height:1.5;color:var(--muted);margin-top:12px}
