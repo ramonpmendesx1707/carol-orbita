@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   appleWebApp: {capable:true,title:"Carol",statusBarStyle:"default"},
   icons: {
     apple: [{url:"/apple-touch-icon.png",sizes:"180x180",type:"image/png"}],
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
   },
 };
 

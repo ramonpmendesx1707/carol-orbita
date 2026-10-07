@@ -1,3 +1,6 @@
+## 1.3.0 — 2026-10-07
+Logo oficial no cabeçalho, rodapé, favicon ICO e ícones iOS/PWA. Reset administrativo por segredo versionado no servidor, revogando sessões antigas uma vez; troca inicial opcional.
+
 # 1.2.0
 - Mapa com nomes completos dos estados e Distrito Federal.
 - Contraste da faixa de contato e texto de atendimento revisados.

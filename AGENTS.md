@@ -1,2 +1,4 @@
 # Carol Órbita — projeto independente
 Leia README.md antes de trabalhar. O projeto de origem ../carol-componentes é somente referência e não pode ser modificado nesta tarefa. Não reutilize sua identidade Sites, API, banco, storage ou Git remoto. Manter .openai/hosting.json exclusivo. Todas as informações comerciais e catálogo foram preservados como snapshot público. Preservar quatro capítulos de história, mapa de Joinville para as cinco regiões e controles de acessibilidade. app/orbita.css e app/orbit-movement.tsx são a nova linguagem visual. Atualizar documentação com mudanças e versões. Nunca versionar segredos ou leads. ADMIN_INITIAL_HASH deve existir apenas no ambiente servidor. Publicar usando o projeto deste diretório.
+
+Atualização autorizada: conta admin e troca inicial não obrigatória. ADMIN_BOOTSTRAP e hashes são exclusivos do servidor. Preservar logo oficial e paletas. O usuário autorizou atualizar ambos os projetos, mantendo recursos independentes.

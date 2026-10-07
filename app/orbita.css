@@ -28,3 +28,5 @@ body{background:#f9f8fc;font-family:Barlow,'Segoe UI',sans-serif}.container{widt
 
 /* Contact invitation: violet text on a softer lavender background. */
 .contact-band{background:#e4ddf2!important}.contact-band p{color:#46365e!important}.contact-band h2{color:#382b70}.capital-label{font-size:11px}.capital-list li{align-items:flex-start}
+
+.hero-title-row{justify-content:flex-end}

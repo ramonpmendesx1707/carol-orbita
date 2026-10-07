@@ -1,3 +1,5 @@
+> Política atual: usuário admin, sem troca obrigatória inicial por solicitação do proprietário. ADMIN_BOOTSTRAP secreto aplica reset de acesso uma vez por revision e invalida sessões anteriores. Senha nunca publicada. As instruções antigas abaixo descrevem o mecanismo legado ADMIN_INITIAL_HASH.
+
 # Administração e integrações — v2.3.0
 
 ## Arquitetura publicada

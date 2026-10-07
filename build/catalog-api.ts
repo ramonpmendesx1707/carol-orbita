@@ -1,8 +1,9 @@
 import source from '../data/catalog.json';
+import {applyAdminBootstrap} from '../lib/admin-bootstrap';
 import {lookupCompany,contactText,contactHtml,type Contact} from '../lib/company';
 import {validCnpj,normalizedPhone} from '../lib/validation';
 import type {Product} from '../lib/catalog';
-type Env={BUCKET?:R2Bucket;DB?:D1Database;ADMIN_INITIAL_HASH?:string;RESEND_API_KEY?:string;EMAIL_FROM?:string};
+type Env={BUCKET?:R2Bucket;DB?:D1Database;ADMIN_INITIAL_HASH?:string;ADMIN_BOOTSTRAP?:string;RESEND_API_KEY?:string;EMAIL_FROM?:string};
 const origins=new Set(['https://ramonpmendesx1707.github.io','https://carolcomponentes.com.br','https://www.carolcomponentes.com.br','https://carol-componentes-industriais.safc-conceicao87.chatgpt.site','http://127.0.0.1:4173','http://127.0.0.1:4174','http://127.0.0.1:8787']);
 const enc=new TextEncoder();
 async function digest(s:string){return [...new Uint8Array(await crypto.subtle.digest('SHA-256',enc.encode(s)))].map(n=>n.toString(16).padStart(2,'0')).join('')}
@@ -44,6 +45,7 @@ export async function catalogApi(request:Request,env:Env):Promise<Response|null>
  if(env.RESEND_API_KEY&&env.EMAIL_FROM){try{const mail=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:'Bearer '+env.RESEND_API_KEY,'Content-Type':'application/json','Idempotency-Key':p.id},body:JSON.stringify({from:env.EMAIL_FROM,to:['ramonpmendesx@gmail.com'],subject:'Nova cotação — '+(company?.tradeName||company?.legalName||p.id.slice(0,8)),html,text:contactText(data)})});sent=mail.ok}catch{}}
  await db.prepare('UPDATE cc_contacts SET status=? WHERE id=?').bind(sent?'sent':'pending',p.id).run();return reply({id:p.id,simulated:!sent,emailStatus:sent?'sent':'pending',whatsappUrl:'https://api.whatsapp.com/send?phone=5547996180088&text='+encodeURIComponent(contactText(data))});
  }
+ if(path==='/api/manage/login')await applyAdminBootstrap(db,env.ADMIN_BOOTSTRAP);
  const admin=await db.prepare('SELECT payload FROM cc_state WHERE id=?').bind('admin').first<{payload:string}>();if(!admin)return reply({error:'Login ainda não configurado no servidor.'},503);const account=JSON.parse(admin.payload);
  if(path==='/api/manage/login'){
  if(request.method!=='POST')return reply({error:'Método inválido.'},405);const key=await digest(request.headers.get('CF-Connecting-IP')||'local');const attempts=await db.prepare('SELECT attempts,since FROM cc_attempts WHERE id=?').bind(key).first<{attempts:number;since:number}>();if(attempts&&attempts.since>Date.now()-900000&&attempts.attempts>=5)return reply({error:'Muitas tentativas. Aguarde 15 minutos.'},429);

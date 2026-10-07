@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {DatabaseSync} from 'node:sqlite';
+import {applyAdminBootstrap} from '../lib/admin-bootstrap.ts';
+const sql=new DatabaseSync(':memory:');sql.exec('CREATE TABLE cc_state(id TEXT PRIMARY KEY,payload TEXT);CREATE TABLE cc_sessions(id TEXT PRIMARY KEY,expires INTEGER);CREATE TABLE cc_attempts(id TEXT PRIMARY KEY,attempts INTEGER,since INTEGER);');
+const db={prepare(query){return {bind(...args){return {first:async()=>sql.prepare(query).get(...args),run:async()=>sql.prepare(query).run(...args),query,args}}}},async batch(statements){sql.exec('BEGIN');try{for(const s of statements)sql.prepare(s.query).run(...s.args);sql.exec('COMMIT')}catch(e){sql.exec('ROLLBACK');throw e}}};
+const config={username:'admin',hash:'00000000-0000-4000-8000-000000000000:'+('0'.repeat(64)),revision:'test-1',mustChange:false};
+sql.exec("INSERT INTO cc_state VALUES('catalog','catalog preserved');INSERT INTO cc_sessions VALUES('old',1);INSERT INTO cc_attempts VALUES('old',5,1);");
+await applyAdminBootstrap(db,JSON.stringify(config));assert.equal(JSON.parse(sql.prepare("SELECT payload FROM cc_state WHERE id='admin'").get().payload).mustChange,false);assert.equal(sql.prepare('SELECT count(*) n FROM cc_sessions').get().n,0);assert.equal(sql.prepare('SELECT count(*) n FROM cc_attempts').get().n,0);
+sql.exec("UPDATE cc_state SET payload='changed-account' WHERE id='admin';INSERT INTO cc_sessions VALUES('new',2);");await applyAdminBootstrap(db,JSON.stringify(config));assert.equal(sql.prepare("SELECT payload FROM cc_state WHERE id='admin'").get().payload,'changed-account');assert.equal(sql.prepare('SELECT count(*) n FROM cc_sessions').get().n,1);
+await applyAdminBootstrap(db,JSON.stringify({...config,revision:'test-2'}));assert.equal(sql.prepare('SELECT count(*) n FROM cc_sessions').get().n,0);assert.equal(sql.prepare("SELECT payload FROM cc_state WHERE id='catalog'").get().payload,'catalog preserved');await assert.rejects(()=>applyAdminBootstrap(db,JSON.stringify({...config,hash:'invalid'})));
+console.log('PASS: one-time reset, revoked sessions/attempts, repeated revision preserved, catalog unchanged, invalid secret rejected.');sql.close();
