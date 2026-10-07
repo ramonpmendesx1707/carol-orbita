@@ -1,0 +1,4 @@
+import type {SVGProps} from 'react';
+export function Instagram(p:SVGProps<SVGSVGElement>){return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" {...p}><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor"/></svg>}
+export function Facebook(p:SVGProps<SVGSVGElement>){return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...p}><path d="M14 22v-9h3l.5-4H14V7c0-1 .4-2 2-2h2V1.4A21 21 0 0 0 15 1c-3.1 0-5 1.9-5 5v3H7v4h3v9Z"/></svg>}
+export function Linkedin(p:SVGProps<SVGSVGElement>){return <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...p}><rect x="3" y="9" width="4" height="12"/><circle cx="5" cy="5" r="2"/><path d="M10 9h4v1.6c.8-1.3 2-1.9 3.4-1.9 3 0 3.6 2 3.6 5V21h-4v-6.5c0-1.8-.3-2.5-1.5-2.5-1.2 0-1.5 1-1.5 2.5V21h-4Z"/></svg>}

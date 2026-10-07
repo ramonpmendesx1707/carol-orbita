@@ -1,0 +1,1 @@
+export default function NotFound(){return <main className="not-found"><p>Carol Componentes</p><h1>Vamos encontrar<br/>outro caminho.</h1><p>Este endereço não está disponível.</p><a className="button primary" href="/">Voltar ao catálogo</a></main>}

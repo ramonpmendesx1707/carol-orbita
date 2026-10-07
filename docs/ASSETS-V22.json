@@ -1,0 +1,74 @@
+[
+  {
+    "file": "public/images/brands/quimatic.jpg",
+    "source": "https://carolfix.com.br/wp-content/uploads/2021/02/parceiro.jpg"
+  },
+  {
+    "file": "public/images/brands/hch.jpg",
+    "source": "https://carolfix.com.br/wp-content/uploads/2021/02/parceiro1.jpg"
+  },
+  {
+    "file": "public/images/brands/vibra-stop.jpg",
+    "source": "https://carolfix.com.br/wp-content/uploads/2021/02/parceiro2.jpg"
+  },
+  {
+    "file": "public/images/brands/kifix.jpg",
+    "source": "https://carolfix.com.br/wp-content/uploads/2021/02/parceiro3.jpg"
+  },
+  {
+    "file": "public/images/brands/merkbak.jpg",
+    "source": "https://carolfix.com.br/wp-content/uploads/2021/02/parceiro4.jpg"
+  },
+  {
+    "file": "public/images/payments/visa.svg",
+    "source": "https://raw.githubusercontent.com/paveli/react-payment-icons-inline/master/IconsSource/img/svg/visa.svg"
+  },
+  {
+    "file": "public/images/payments/mastercard.svg",
+    "source": "https://raw.githubusercontent.com/paveli/react-payment-icons-inline/master/IconsSource/img/svg/mastercard.svg"
+  },
+  {
+    "file": "public/images/payments/hipercard.svg",
+    "source": "https://raw.githubusercontent.com/aaronfagan/svg-credit-card-payment-icons/main/flat/hipercard.svg"
+  },
+  {
+    "file": "public/images/payments/amex.svg",
+    "source": "https://raw.githubusercontent.com/paveli/react-payment-icons-inline/master/IconsSource/img/svg/amex.svg"
+  },
+  {
+    "file": "public/images/payments/diners.svg",
+    "source": "https://raw.githubusercontent.com/paveli/react-payment-icons-inline/master/IconsSource/img/svg/diners.svg"
+  },
+  {
+    "file": "public/images/payments/aura.svg",
+    "source": "https://raw.githubusercontent.com/paveli/react-payment-icons-inline/master/IconsSource/img/svg/aura.svg"
+  },
+  {
+    "file": "public/images/payments/elo.svg",
+    "source": "https://raw.githubusercontent.com/paveli/react-payment-icons-inline/master/IconsSource/img/svg/elo.svg"
+  },
+  {
+    "file": "public/images/payments/discover.svg",
+    "source": "https://raw.githubusercontent.com/paveli/react-payment-icons-inline/master/IconsSource/img/svg/discover.svg"
+  },
+  {
+    "file": "public/images/payments/jcb.svg",
+    "source": "https://raw.githubusercontent.com/paveli/react-payment-icons-inline/master/IconsSource/img/svg/jcb.svg"
+  },
+  {
+    "file": "public/images/payments/boleto.svg",
+    "source": "https://raw.githubusercontent.com/paveli/react-payment-icons-inline/master/IconsSource/img/svg/boleto.svg"
+  },
+  {
+    "file": "public/images/payments/bb.svg",
+    "source": "https://raw.githubusercontent.com/paveli/react-payment-icons-inline/master/IconsSource/img/svg/bb.svg"
+  },
+  {
+    "file": "public/images/payments/bradesco.svg",
+    "source": "https://raw.githubusercontent.com/paveli/react-payment-icons-inline/master/IconsSource/img/svg/bradesco.svg"
+  },
+  {
+    "file": "public/images/payments/itau.svg",
+    "source": "https://raw.githubusercontent.com/paveli/react-payment-icons-inline/master/IconsSource/img/svg/itau.svg"
+  }
+]
